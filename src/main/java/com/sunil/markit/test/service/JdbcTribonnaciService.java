@@ -92,8 +92,6 @@ public class JdbcTribonnaciService implements TribonnaciService {
     }
 
     private void updateCallCount(final int input, Map<Integer, Integer> callCount) {
-
-//        App app = new App();
         synchronized (callCount) {
             if (callCount.containsKey(input)) {
                 callCount.put(input, callCount.get(input) + 1);
